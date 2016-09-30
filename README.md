@@ -1,52 +1,56 @@
 ##SuiteCRM 7.7.3
 
-[![Build Status](https://travis-ci.org/salesagility/SuiteCRM.svg?branch=hotfix)](https://travis-ci.org/salesagility/SuiteCRM)
+Дамп базы в suite_dump.sql
 
+Работа с веб сервисами soap и rest (2 задания) - https://github.com/Calm12/soaprest
 
-### What's in this repository ###
+***
+Делал практически все напрямую, без custom, это вроде не критично в данной ситуации.
 
-This is the git repository for the SuiteCRM project, the award-winning, enterprise-class open source CRM.
+***
+Выполненные задания:
 
-This repository has been created to allow community members to collaborate and contribute to the project, helping to develop the SuiteCRM ecosystem.
+--SUGAR-BEGINNER
 
-### Contributing to the project ###
+установить и настроить CRM (руссификация и настройка email)
+установить ZuckerReports – не нужно
+создать свой мродуль через констуктор модулей
+кастомизировать форму редактирования записи, просмотра записи, списка
+залить свой файл на сервер используя только загрузчик модулей
+свой модуль связать с уже существующим, добавить субпанель в него
+добавить свой javascript в форму редактирования записи
+объединить вывод двух значений в одно поле (допустим создан кем и когда) в карточку контакта/*ФИО*/
+объединить два значения в одно поле в списке, сабпанели (допустим имя и фамилию)
+изменить содержимое всплывающей информации в ListView (Additional Details, иконка i в списке например, контакта или контрагента)
+установить любую старую Sugar CRM и обновнить до последней актуальной, используя мастер обновления (https://sourceforge.net/projects/sugarcrm/
+files/SugarCRM%20Release%20Archive/SugarCRM%206.5.X/)
 
-#####Important: Please read before developing code intended for inclusion in the SuiteCRM project.#####
+--SUGAR-JUNIOR
 
-Please read and sign the following [contributor agreement][cont_agrmt]
+повесить хук на сохранение записи – сохранение контрагента и своего модуля
+добавить свою кнопку в субпанель (субпанель контактов в контрагентах)
+добавить вычисляемое поле в карточку контрагента
+добавить ссылку в правое верхнее меню
+добавить свою задачу в планировщик
+поменять иконки в "действиях" модуля
+(курлом в модуль,  а там в базу REST API) - внедрить форму создания предварительного контакта на сторонний ресурс
+высвечивать контакты с ДР другим цветом в listview и subpanel (BDATE==1)
+добавить модуль в sugarfeed
+добавить в карточку контакта iframe с любым ресурсом
 
-[cont_agrmt]: https://www.clahub.com/agreements/salesagility/SuiteCRM
+*+action в модулях контрагентов/контактов, и пункты меню к ним
 
-The Contributor Agreement only needs to be signed once for all pull requests and contributions. 
+--SUGAR-SENIOR
 
-Once signed and confirmed, any pull requests will be considered for inclusion in the SuiteCRM project.
+добавить свой виджет (SugarWidgetSubPanelTopTestButton)
+добавить кнопку в карточку контакта сверху (detailview) (допустим отправка письма этому контакту статичного содержания) - /modules/Contacts/StaticSender.php
+добавить в администраторскую панель сохранение какой-либо переменной в sugarconfig system_test01
+добавить в карточку контакта поле googlemap с точкой адреса если есть – даже сразу iframe с картой на этой точке
 
-### Helpful links for the community###
+--SUGAR-MONSTER!!!
 
-The following links offer various ways to view, contribute and collaborate to the SuiteCRM project:
-
-
-+ [SuiteCRM Demo - A fully working SuiteCRM demo available for people to try before downloading the full SuiteCRM package][suitecrm_demo]
-+ [SuiteCRM Forums - Forums dedicated to discussions about SuiteCRM with various topics and subjects about SuiteCRM][suitecrm_forums]
-+ [SuiteCRM Documentation - A wiki containing relevant documentation to SuiteCRM, constantly being added to][suitecrm_docs]
-+ [SuiteCRM Partners - Our partner section where partners of SuiteCRM can be viewed][suitecrm_partners]
-+ [SuiteCRM Extensions Directory - An extensions directory where community members can submit extensions built for SuiteCRM][suitecrm_ext]
-
-[suitecrm_demo]: https://suitecrm.com/demo
-[suitecrm_forums]: https://suitecrm.com/forum/index
-[suitecrm_docs]: https://suitecrm.com/wiki
-[suitecrm_partners]: https://suitecrm.com/community/partners
-[suitecrm_ext]: https://store.suitecrm.com/
-
-### Development Roadmap ###
-
-[ View the Roadmap here and get involved][suitecrm_roadmap]
-
-[suitecrm_roadmap]: https://suitecrm.com/community/roadmap
-
-### Support & Licensing ###
-
-SuiteCRM is an open source project. As such please do not contact us directly via email or phone for SuiteCRM support. Instead please use our support forum. By using the forum the knowledge is shared with everyone in the community. Our developers answer questions on the forum daily but it also gives the other members of the community the opportunity to contribute. If you would like customisations to specifically fit your SuiteCRM  needs then please use our contact form.
-
-SuiteCRM is published under the AGPLv3 license.
+добавить свой чарт
+соединится через SOAP или REST с SugarCRM, осуществить поиск по email
+*добавить свой коннектор по примеру linked in (например facebook, vkontakte) – линкедин только в старой версии, в новых уже есть фб и твиттер, но требуют калбек на срм, чего не могу сейчас дать. А без примера работы фб вк не подключить.
+добавить экшн в субпанель который экспортирует записи с человеческими именами (возможно кастомный запрос) - субпанель контактов в контрагентах
 
